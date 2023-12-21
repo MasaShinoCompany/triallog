@@ -10,8 +10,8 @@ terraform {
     }
   }
   backend "s3" {
-    bucket  = "{YOUR-S3-BUCKET-NAME}"
-    key     = "{YOUR-S3-BUCKET-KEY}"
+    bucket  = "udemy.terraform.s3"
+    key     = "terraform.udemy.test.tfstate"
     region  = "ap-northeast-1"
     profile = "terraform"
   }

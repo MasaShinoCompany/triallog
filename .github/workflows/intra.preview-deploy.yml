@@ -32,3 +32,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2 #動画バージョンと合わせる
         with: 
           terraform_version: ${{ env.TF_VERSION }}
+
+      - name: "Terraform format"
+        run: |
+          terraform fmt -check

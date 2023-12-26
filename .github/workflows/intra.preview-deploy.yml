@@ -37,10 +37,10 @@ jobs:
         run: |
           terraform fmt -check
       - name: "Configure AWS Credential "
-        uses: aws-actions/configure-aws-credentials@v1 #動画バージョンと合わせる
+        uses: aws-actions/configure-aws-credentials@v2 #動画バージョンと合わせる
         with: 
           role-to-assume: arn:aws:iam::564024498866:role/triallog-dev-githubactions-iamrole
-          aws-region: ${{ env.AWS_REGION }}
+          aws-region: us-east-1
       - name: "Terraform Init"
         run: |
           terraform init -no-color

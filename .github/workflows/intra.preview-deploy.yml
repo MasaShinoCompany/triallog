@@ -39,7 +39,7 @@ jobs:
       - name: "Configure AWS Credential "
         uses: aws-actions/configure-aws-credentials@v1 #動画バージョンと合わせる
         with: 
-          role-to-assume: ${{ secrets.AWS_IAM_ROLE_ARN }}
+          role-to-assume: arn:aws:iam::564024498866:role/triallog-dev-githubactions-iamrole
           aws-region: ${{ env.AWS_REGION }}
       - name: "Terraform Init"
         run: |
